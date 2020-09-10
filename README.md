@@ -64,4 +64,4 @@ For more details please check the readme file in each folder. Each HW contains p
 TAs provide us docker image to work within docker. Regular Ubuntu with `flex` and `bison` installed could make it as well. I use Arch by the way.
 
 ## Notes
-I only write code in `src` folder. Other are written either by TAs or third party tools. For more details please check the readme file in each folder.
+I only write code in `src` folder. Other are written either by TAs or provided by third party tools. For more details please check the readme file in each folder.
