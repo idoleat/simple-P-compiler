@@ -1,0 +1,18 @@
+1: /**
+2:  * declErr.p: local variable declaration after statement(s)
+3:  */
+4: //&T-
+5: declErr;
+6: 
+7: var globalA: integer;
+8: 
+9: begin
+10: 
+11:         globalA := 123;
+12: 
+
+|--------------------------------------------------------------------------
+| Error found in Line #13:         var
+|
+| Unmatched token: var
+|--------------------------------------------------------------------------

@@ -1,0 +1,6 @@
+1: // P language doesn't have braces
+<id: int>
+<id: main>
+<(>
+<)>
+Error at line 2: bad character "{"

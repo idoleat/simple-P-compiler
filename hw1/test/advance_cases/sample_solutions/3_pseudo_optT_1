@@ -1,0 +1,23 @@
+1: /*
+2: //&T-   // should not close
+3: */
+4: 
+5: ///////////&T-		// not pseudo comment
+6: 
+7: //$t-
+8: 
+9: // comment 
+10: 
+11: //&T-&T+   // close
+12: //12345
+13: 
+14: //&T+   // open
+<KWinteger>
+<id: x>
+<;>
+15: integer x;
+16: // &T-  // comment
+<KWinteger>
+<id: x>
+<;>
+17: integer x;

@@ -1,0 +1,156 @@
+AdvSymbol
+--- your output:(result/AdvSymbol)
++++ answer:(./basic_cases/sample-solutions/AdvSymbol)
+@@ -46,6 +46,8 @@
+ ==============================================================================================================
+ Name                             Kind       Level      Type             Attribute  
+ --------------------------------------------------------------------------------------------------------------
++p1                               parameter  1(local)   integer                     
++aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa variable   1(local)   integer                     
+ --------------------------------------------------------------------------------------------------------------
+ ==============================================================================================================
+ Name                             Kind       Level      Type             Attribute  
+@@ -81,9 +83,12 @@
+ <Error> Found in line 6, column 1: symbol redecl is redeclared
+     redecl(p1 : integer)
+     ^
+-<Error> Found in line 23, column 20: return 'string' from a function with return type 'void'
+-                return p1;
+-                       ^
++<Error> Found in line 9, column 9: symbol p1 is redeclared
++        var p1 : real;
++            ^
++<Error> Found in line 11, column 9: symbol aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa is redeclared
++            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa : integer;
++            ^
+ <Error> Found in line 29, column 12: return 'integer' from a function with return type 'string'
+         return p1;
+                ^
+
+AdvSema
+--- your output:(result/AdvSema)
++++ answer:(./basic_cases/sample-solutions/AdvSema)
+@@ -1,3 +1,119 @@
+-terminate called after throwing an instance of 'std::logic_error'
+-  what():  basic_string::_M_construct null not valid
+-Aborted (core dumped)
++1: //&T-
++2: //&D-
++3: 
++4: AdvSema;
++5: 
++6: var global : integer;
++7: 
++8: procedure1()
++9: begin
++10: end
++11: end
++12: 
++13: procedure2(a: integer)
++14: begin
++15: end
++16: end
++17: 
++18: // [ERROR] redeclaration
++19: global()
++20: begin
++21: end
++22: end
++23: 
++24: extern() : integer;
++25: 
++26: // [ERROR] each parameter has a wrong declaration
++27: parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++28: 
++29: begin
++30:     var int : integer; 
++31:     var arr : array 30 of real;
++32:     var i: string;
++33: 
++34:     // [ERROR] must be scalar type
++35:     print procedure1();
++36: 
++37:     // [ERROR] only errors of invocation
++38:     print null();
++39:     print int("don't judge me");
++40:     print procedure1("overflow");
++41:     print procedure2("I'm string");
++42: 
++43:     // [ERROR] only error of operation
++44:     print arr[1.0 and 2.0];
++45: 
++46:     for i := 19 to 22 do
++47:     begin
++48:         var str : string;
++49: 
++50:         for str := 19 to 89 do
++51:         begin
++52:         end
++53:         end do
++54: 
++55:         // [ERROR] inner scope but i is loop_var
++56:         for i := 19 to 25 do
++57:         begin
++58:         end
++59:         end do
++60: 
++61:         // [ERROR] wrong operands
++62:         print i and str;
++63:     end
++64:     end do
++65: 
++66:     // [ERROR] not a function id
++67:     global();
++68: 
++69:     procedure2(extern());
++70: end
++71: end
++<Error> Found in line 19, column 1: symbol global is redeclared
++    global()
++    ^
++<Error> Found in line 27, column 17: 'a' declared as an array with an index that is not greater than 0
++    parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++                    ^
++<Error> Found in line 27, column 20: 'b' declared as an array with an index that is not greater than 0
++    parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++                       ^
++<Error> Found in line 27, column 23: 'c' declared as an array with an index that is not greater than 0
++    parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++                          ^
++<Error> Found in line 27, column 26: 'd' declared as an array with an index that is not greater than 0
++    parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++                             ^
++<Error> Found in line 27, column 29: 'e' declared as an array with an index that is not greater than 0
++    parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++                                ^
++<Error> Found in line 27, column 32: 'f' declared as an array with an index that is not greater than 0
++    parameterErrors(a, b, c, d, e, f : array 30 of array 0 of integer);
++                                   ^
++<Error> Found in line 35, column 11: expression of print statement must be scalar type
++        print procedure1();
++              ^
++<Error> Found in line 38, column 11: use of undeclared symbol 'null'
++        print null();
++              ^
++<Error> Found in line 39, column 11: call of non-function symbol 'int'
++        print int("don't judge me");
++              ^
++<Error> Found in line 40, column 11: too few/much arguments provided for function 'procedure1'
++        print procedure1("overflow");
++              ^
++<Error> Found in line 41, column 22: incompatible type passing 'string' to parameter of type 'integer'
++        print procedure2("I'm string");
++                         ^
++<Error> Found in line 44, column 19: invalid operands to binary operator 'and' ('real' and 'real')
++        print arr[1.0 and 2.0];
++                      ^
++<Error> Found in line 56, column 13: symbol i is redeclared
++            for i := 19 to 25 do
++                ^
++<Error> Found in line 62, column 17: invalid operands to binary operator 'and' ('integer' and 'string')
++            print i and str;
++                    ^
++<Error> Found in line 67, column 5: call of non-function symbol 'global'
++        global();
++        ^
+

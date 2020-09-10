@@ -1,0 +1,28 @@
+1: /**
+2:  * whileErr.p: while loop loses two keywords
+3:  */
+4: //&T-
+5: whileErr;
+6: 
+7: func () : integer
+8: begin
+9: end
+10: end
+11: 
+12: begin
+13:     var b : integer;
+14:     var a : boolean;
+15:     while a do
+16:     begin
+17:     for b := 0 to 10 do
+18:     begin
+19:     end
+20:     end do
+21:     end         
+22: end
+
+|--------------------------------------------------------------------------
+| Error found in Line #23: end
+|
+| Unmatched token: end
+|--------------------------------------------------------------------------

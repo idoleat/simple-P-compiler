@@ -1,0 +1,92 @@
+1: //&T-
+2: FunctionInvocation;
+3: 
+4: func() : boolean
+5: begin
+6:     return true;
+7: end
+8: end
+9: 
+10: func2(a: integer; b: string)
+11: begin
+12: end
+13: end
+14: 
+15: func3(a: integer; b: string; c: array 4 of integer)
+16: begin
+17: end
+18: end
+19: 
+20: begin
+21:     var arr: array 7 of integer;
+22: 
+23:     // [ERROR] identifier has to be in symbol tables
+24:     null(123, 456);
+25: 
+26:     // [ERROR] kind of symbol has to be function
+27:     arr(123, 456);
+28: 
+29:     // [ERROR] # of arguments isn't the same as parameters
+30:     func("overflow");
+31: 
+32:     // [CORRECT]
+33:     func2(123, "456");
+34: 
+35:     // [ERROR] incompatible argument and parameter types
+36:     func2("123", "456");
+37: 
+38:     // [ERROR] incompatible argument and parameter types
+39:     func2(123, 456);
+40: 
+41:     // [ERROR] incompatible argument and parameter types
+42:     func3(123, "456", arr);
+43: end
+44: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+a                                parameter  1(local)   integer                     
+b                                parameter  1(local)   string                      
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+a                                parameter  1(local)   integer                     
+b                                parameter  1(local)   string                      
+c                                parameter  1(local)   integer [4]                 
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+arr                              variable   1(local)   integer [7]                 
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+FunctionInvocation               program    0(global)  void                        
+func                             function   0(global)  boolean                     
+func2                            function   0(global)  void             integer, string
+func3                            function   0(global)  void             integer, string, integer [4]
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 24, column 5: use of undeclared symbol 'null'
+        null(123, 456);
+        ^
+<Error> Found in line 27, column 5: call of non-function symbol 'arr'
+        arr(123, 456);
+        ^
+<Error> Found in line 30, column 5: too few/much arguments provided for function 'func'
+        func("overflow");
+        ^
+<Error> Found in line 36, column 11: incompatible type passing 'string' to parameter of type 'integer'
+        func2("123", "456");
+              ^
+<Error> Found in line 39, column 16: incompatible type passing 'integer' to parameter of type 'string'
+        func2(123, 456);
+                   ^
+<Error> Found in line 42, column 23: incompatible type passing 'integer [7]' to parameter of type 'integer [4]'
+        func3(123, "456", arr);
+                          ^

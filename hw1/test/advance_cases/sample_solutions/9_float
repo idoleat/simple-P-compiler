@@ -1,0 +1,18 @@
+<float: 123.00123>
+1: 123.00123
+<oct_integer: 00>
+<float: 9.1>
+2: 009.1
+<float: 1.23>
+<oct_integer: 0000>
+3: 1.230000
+<float: 3.1>
+<oct_integer: 00000>
+4: 3.100000
+<float: 123.123>
+<oct_integer: 00>
+5: 123.12300
+<float: 12300.123>
+6: 12300.123
+<oct_integer: 00123>
+Error at line 7: bad character "."

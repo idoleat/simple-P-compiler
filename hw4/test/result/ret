@@ -1,0 +1,47 @@
+1: //&T-
+2: ret;
+3: 
+4: func() : boolean
+5: begin
+6:     var bool : array 10 of array 100 of boolean;
+7: 
+8:     // [ERROR] incompatible type
+9:     return bool[1];
+10: 
+11:     // [CORRECT]
+12:     return bool[1][1];
+13: 
+14:     // [ERROR] incompatible type
+15:     return bool[1][1][1];
+16: end
+17: end
+18: 
+19: begin
+20:     // [ERROR] program doesn't return a value
+21:     return 10;
+22: end
+23: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+bool                             variable   1(local)   boolean [10][100]           
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+ret                              program    0(global)  void                        
+func                             function   0(global)  boolean                     
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 9, column 12: return 'boolean [100]' from a function with return type 'boolean'
+        return bool[1];
+               ^
+<Error> Found in line 15, column 12: there is an over array subscript on 'bool'
+        return bool[1][1][1];
+               ^
+<Error> Found in line 21, column 5: program/procedure should not return a value
+        return 10;
+        ^

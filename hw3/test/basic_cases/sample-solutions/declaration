@@ -1,0 +1,31 @@
+program <line: 4, col: 1> decl void
+  declaration <line: 8, col: 1>
+    variable <line: 8, col: 5> a1 integer
+    variable <line: 8, col: 9> a2 integer
+  declaration <line: 9, col: 1>
+    variable <line: 9, col: 5> b1 boolean
+  declaration <line: 10, col: 1>
+    variable <line: 10, col: 5> c1 real
+  declaration <line: 11, col: 1>
+    variable <line: 11, col: 5> d1 string
+  declaration <line: 12, col: 1>
+    variable <line: 12, col: 5> e1 integer
+      constant <line: 12, col: 14> 10
+    variable <line: 12, col: 9> e2 integer
+      constant <line: 12, col: 14> 10
+  declaration <line: 13, col: 1>
+    variable <line: 13, col: 5> f1 boolean
+      constant <line: 13, col: 10> true
+  declaration <line: 14, col: 1>
+    variable <line: 14, col: 5> g1 real
+      constant <line: 14, col: 10> -1.000000
+  declaration <line: 15, col: 1>
+    variable <line: 15, col: 5> h1 string
+      constant <line: 15, col: 10> muda muda muda!!!
+  declaration <line: 16, col: 1>
+    variable <line: 16, col: 5> i1 real [3][2]
+  compound statement <line: 18, col: 1>
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

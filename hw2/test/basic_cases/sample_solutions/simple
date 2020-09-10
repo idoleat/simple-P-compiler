@@ -1,0 +1,20 @@
+1: //&T-
+2: //test variable_reference := expression
+3: simple;
+4: 
+5: begin
+6:     var a : integer;
+7:     var b : integer;
+8:     var c : integer;
+9:     a := 1;
+10:     b := a + 2;
+11:     c := a * b - 1;
+12:     a := c * 3 / 3 + 4;
+13:     b := a;
+14:     c := -5;
+15: end
+16: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

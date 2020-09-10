@@ -1,0 +1,6 @@
+program <line: 4, col: 1> program void
+  compound statement <line: 8, col: 1>
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

@@ -1,0 +1,19 @@
+1: /**
+2:  * arrayErr.p: array is error in declaration
+3:  */
+4: //&T-
+5: arrayErr;
+6: 
+7: func () : integer
+8: begin
+9: end
+10: end
+11: begin
+12:         var b : integer;
+13:         var a : real;
+
+|--------------------------------------------------------------------------
+| Error found in Line #14:         var c : array -
+|
+| Unmatched token: -
+|--------------------------------------------------------------------------

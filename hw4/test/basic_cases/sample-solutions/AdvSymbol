@@ -1,0 +1,100 @@
+1: //&T-
+2: adv;
+3: 
+4: var redecl : integer;
+5: 
+6: redecl(p1 : integer)
+7: begin
+8:     // [ERROR] redeclaration
+9:     var p1 : real;
+10:     var aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
+11:         aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa : integer;
+12: end
+13: end
+14: 
+15: hideDecl(p1 : integer) : string
+16: begin
+17:     begin
+18:         // hide p1 of integer version
+19:         var p1 : string;
+20: 
+21:         begin
+22:             // [PASS] p1 of integer version should be hidden
+23:             return p1;
+24:         end
+25: 
+26:     end
+27:     
+28:     // [ERROR] return type is string
+29:     return p1;
+30: end
+31: end
+32: 
+33: skipCheckOfRedecl(p1 : string) : integer
+34: begin
+35:     // [ERROR] redeclaration
+36:     var p1 : integer;
+37: 
+38:     // [ERROR] p1 is string
+39:     return p1;
+40: end
+41: end
+42: 
+43: begin
+44: end
+45: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+p1                               parameter  1(local)   integer                     
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa variable   1(local)   integer                     
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+p1                               variable   2(local)   string                      
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+p1                               parameter  1(local)   integer                     
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+p1                               parameter  1(local)   string                      
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+adv                              program    0(global)  void                        
+redecl                           variable   0(global)  integer                     
+hideDecl                         function   0(global)  string           integer    
+skipCheckOfRedecl                function   0(global)  integer          string     
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 6, column 1: symbol redecl is redeclared
+    redecl(p1 : integer)
+    ^
+<Error> Found in line 9, column 9: symbol p1 is redeclared
+        var p1 : real;
+            ^
+<Error> Found in line 11, column 9: symbol aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa is redeclared
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa : integer;
+            ^
+<Error> Found in line 29, column 12: return 'integer' from a function with return type 'string'
+        return p1;
+               ^
+<Error> Found in line 36, column 9: symbol p1 is redeclared
+        var p1 : integer;
+            ^
+<Error> Found in line 39, column 12: return 'string' from a function with return type 'integer'
+        return p1;
+               ^

@@ -1,0 +1,14 @@
+1: // comment in string
+<id: a>
+<:=>
+<string:  abcdefgh  -- /* ^^b */ >
+<;>
+2:  a := " abcdefgh  -- /* ^^b */ ";
+3: 
+4: /*  string in comment
+5:  string a := " hello     world\n";
+6:  00123
+7: */
+8: 
+<id: ident>
+Error at line 9: bad character "_"

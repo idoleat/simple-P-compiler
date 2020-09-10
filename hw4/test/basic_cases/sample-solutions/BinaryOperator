@@ -1,0 +1,224 @@
+1: //&T-
+2: BinaryOperator;
+3: 
+4: decimal(): integer
+5: begin
+6:     return 10;
+7: end
+8: end
+9: 
+10: octal(): integer
+11: begin
+12:     return 03;
+13: end
+14: end
+15: 
+16: scientific(): real
+17: begin
+18:     return 1.3e+123;
+19: end
+20: end
+21: 
+22: begin
+23:     var vDecimal: integer;
+24:     var vReal: 1.0;
+25:     var vScientific: 123e+2;
+26:     var vDecimalArr: array 1 of array 1 of integer;
+27:     var vRealArr: array 1 of array 1 of real;
+28:     var vStringArr: array 1 of array 1 of string;
+29:     var vBoolArr: array 1 of boolean;
+30: 
+31:     // ------------------------
+32:     // safe area
+33:     // ------------------------
+34: 
+35:     // arithmetic
+36:     print 03 + 10;
+37:     print decimal() - octal();
+38:     print (1 * 0124) * 1.0;
+39:     print (vDecimal + 1.3e+123) / 03;
+40:     print (vDecimal + scientific()) - vDecimal;
+41: 
+42:     // mod
+43:     print 10 mod (03 mod vDecimalArr[1][3]);
+44:     print octal() mod vDecimalArr[2][1];
+45: 
+46:     // boolean
+47:     print true and (false or true);
+48:     print false and true;
+49:     print vBoolArr[3] or vBoolArr[2];
+50: 
+51:     // relational
+52:     print 03 < 10;
+53:     print decimal() <= octal();
+54:     print 0124 = 1.0;
+55:     print 1.3e+123 >= 03;
+56:     print vDecimal > scientific();
+57:     print vDecimal <> scientific();
+58:     print (vDecimal <> scientific()) and (0124 <= vDecimal);
+59: 
+60:     // string
+61:     print "SSLAB" + "NO.1";
+62:     print "SSLAB" + (vStringArr[1][2] + "AAAAAAA");
+63: 
+64:     // ------------------------
+65:     // unsafe area
+66:     // ------------------------
+67: 
+68:     // arithmetic
+69:     print vDecimalArr[2] + vRealArr[4][2];
+70:     print vRealArr[4][2] - vDecimalArr[2];
+71:     print vBoolArr[4] * vRealArr[3][3];
+72:     print vRealArr[4][2] / vRealArr[2];
+73:     print ("SSLAB" + (vRealArr[4][2] - vDecimalArr[2])) + (vRealArr[4][2] + (true and false));
+74: 
+75:     // mod
+76:     print vDecimal mod vReal;
+77:     print vReal mod decimal();
+78:     print vReal mod "SSLAB";
+79:     print vScientific mod true;
+80:     print vStringArr[3][3] mod (3 mod 2);
+81: 
+82:     // boolean
+83:     print 10 and true;
+84:     print false and "SSLAB";
+85:     print vBoolArr or true;
+86: 
+87:     // relational
+88:     print vDecimalArr[2] < vRealArr[4][2];
+89:     print vRealArr[4][2] = vDecimalArr[2];
+90:     print vBoolArr[4] >= vRealArr[3][3];
+91:     print vRealArr[4][2] <> vRealArr[2];
+92:     print (vDecimal <> vBoolArr[3]) and (0124 <= vStringArr[3]);
+93: 
+94:     // string
+95:     print "SSLAB" + decimal();
+96:     print "SSLAB" - "SS";
+97:     print "SSLAB" * "SS";
+98:     print "SSLAB" / "SS";
+99:     print "SSLAB" mod "SS";
+100:     print "SSLAB" and "SS";
+101:     print "SSLAB" or "SS";
+102:     print "SSLAB" < "SS";
+103:     print "SSLAB" > "SS";
+104: 
+105: end
+106: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+vDecimal                         variable   1(local)   integer                     
+vReal                            constant   1(local)   real             1.000000   
+vScientific                      constant   1(local)   real             12300.000000
+vDecimalArr                      variable   1(local)   integer [1][1]              
+vRealArr                         variable   1(local)   real [1][1]                 
+vStringArr                       variable   1(local)   string [1][1]               
+vBoolArr                         variable   1(local)   boolean [1]                 
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+BinaryOperator                   program    0(global)  void                        
+decimal                          function   0(global)  integer                     
+octal                            function   0(global)  integer                     
+scientific                       function   0(global)  real                        
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 69, column 26: invalid operands to binary operator '+' ('integer [1]' and 'real')
+        print vDecimalArr[2] + vRealArr[4][2];
+                             ^
+<Error> Found in line 70, column 26: invalid operands to binary operator '-' ('real' and 'integer [1]')
+        print vRealArr[4][2] - vDecimalArr[2];
+                             ^
+<Error> Found in line 71, column 23: invalid operands to binary operator '*' ('boolean' and 'real')
+        print vBoolArr[4] * vRealArr[3][3];
+                          ^
+<Error> Found in line 72, column 26: invalid operands to binary operator '/' ('real' and 'real [1]')
+        print vRealArr[4][2] / vRealArr[2];
+                             ^
+<Error> Found in line 73, column 38: invalid operands to binary operator '-' ('real' and 'integer [1]')
+        print ("SSLAB" + (vRealArr[4][2] - vDecimalArr[2])) + (vRealArr[4][2] + (true and false));
+                                         ^
+<Error> Found in line 73, column 75: invalid operands to binary operator '+' ('real' and 'boolean')
+        print ("SSLAB" + (vRealArr[4][2] - vDecimalArr[2])) + (vRealArr[4][2] + (true and false));
+                                                                              ^
+<Error> Found in line 76, column 20: invalid operands to binary operator 'mod' ('integer' and 'real')
+        print vDecimal mod vReal;
+                       ^
+<Error> Found in line 77, column 17: invalid operands to binary operator 'mod' ('real' and 'integer')
+        print vReal mod decimal();
+                    ^
+<Error> Found in line 78, column 17: invalid operands to binary operator 'mod' ('real' and 'string')
+        print vReal mod "SSLAB";
+                    ^
+<Error> Found in line 79, column 23: invalid operands to binary operator 'mod' ('real' and 'boolean')
+        print vScientific mod true;
+                          ^
+<Error> Found in line 80, column 28: invalid operands to binary operator 'mod' ('string' and 'integer')
+        print vStringArr[3][3] mod (3 mod 2);
+                               ^
+<Error> Found in line 83, column 14: invalid operands to binary operator 'and' ('integer' and 'boolean')
+        print 10 and true;
+                 ^
+<Error> Found in line 84, column 17: invalid operands to binary operator 'and' ('boolean' and 'string')
+        print false and "SSLAB";
+                    ^
+<Error> Found in line 85, column 20: invalid operands to binary operator 'or' ('boolean [1]' and 'boolean')
+        print vBoolArr or true;
+                       ^
+<Error> Found in line 88, column 26: invalid operands to binary operator '<' ('integer [1]' and 'real')
+        print vDecimalArr[2] < vRealArr[4][2];
+                             ^
+<Error> Found in line 89, column 26: invalid operands to binary operator '=' ('real' and 'integer [1]')
+        print vRealArr[4][2] = vDecimalArr[2];
+                             ^
+<Error> Found in line 90, column 23: invalid operands to binary operator '>=' ('boolean' and 'real')
+        print vBoolArr[4] >= vRealArr[3][3];
+                          ^
+<Error> Found in line 91, column 26: invalid operands to binary operator '<>' ('real' and 'real [1]')
+        print vRealArr[4][2] <> vRealArr[2];
+                             ^
+<Error> Found in line 92, column 21: invalid operands to binary operator '<>' ('integer' and 'boolean')
+        print (vDecimal <> vBoolArr[3]) and (0124 <= vStringArr[3]);
+                        ^
+<Error> Found in line 92, column 47: invalid operands to binary operator '<=' ('integer' and 'string [1]')
+        print (vDecimal <> vBoolArr[3]) and (0124 <= vStringArr[3]);
+                                                  ^
+<Error> Found in line 95, column 19: invalid operands to binary operator '+' ('string' and 'integer')
+        print "SSLAB" + decimal();
+                      ^
+<Error> Found in line 96, column 19: invalid operands to binary operator '-' ('string' and 'string')
+        print "SSLAB" - "SS";
+                      ^
+<Error> Found in line 97, column 19: invalid operands to binary operator '*' ('string' and 'string')
+        print "SSLAB" * "SS";
+                      ^
+<Error> Found in line 98, column 19: invalid operands to binary operator '/' ('string' and 'string')
+        print "SSLAB" / "SS";
+                      ^
+<Error> Found in line 99, column 19: invalid operands to binary operator 'mod' ('string' and 'string')
+        print "SSLAB" mod "SS";
+                      ^
+<Error> Found in line 100, column 19: invalid operands to binary operator 'and' ('string' and 'string')
+        print "SSLAB" and "SS";
+                      ^
+<Error> Found in line 101, column 19: invalid operands to binary operator 'or' ('string' and 'string')
+        print "SSLAB" or "SS";
+                      ^
+<Error> Found in line 102, column 19: invalid operands to binary operator '<' ('string' and 'string')
+        print "SSLAB" < "SS";
+                      ^
+<Error> Found in line 103, column 19: invalid operands to binary operator '>' ('string' and 'string')
+        print "SSLAB" > "SS";
+                      ^

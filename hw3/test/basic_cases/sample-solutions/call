@@ -1,0 +1,26 @@
+program <line: 4, col: 1> call void
+  function declaration <line: 8, col: 1> func integer (integer, integer)
+    declaration <line: 8, col: 6>
+      variable <line: 8, col: 6> a integer
+      variable <line: 8, col: 9> b integer
+    compound statement <line: 9, col: 1>
+      if statement <line: 10, col: 3>
+        binary operator <line: 10, col: 8> <
+          variable reference <line: 10, col: 6> a
+          variable reference <line: 10, col: 10> b
+        compound statement <line: 11, col: 3>
+          print statement <line: 12, col: 5>
+            constant <line: 12, col: 11> 55146
+        compound statement <line: 15, col: 3>
+          print statement <line: 16, col: 5>
+            constant <line: 16, col: 11> 22146
+  compound statement <line: 22, col: 1>
+    function invocation <line: 23, col: 3> func
+      constant <line: 23, col: 8> 20
+      constant <line: 23, col: 12> 30
+    print statement <line: 24, col: 3>
+      function invocation <line: 24, col: 9> func
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

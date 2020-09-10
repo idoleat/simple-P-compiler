@@ -1,0 +1,29 @@
+1: //&T-
+2: UnaryOperator;
+3: begin
+4:     var int : integer;
+5:     var arr : array 10 of array 100 of boolean;
+6: 
+7:     print -int;
+8:     print -int[23][214][421];
+9:     print not arr[4][23];
+10:     print not arr;
+11: end
+12: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+int                              variable   1(local)   integer                     
+arr                              variable   1(local)   boolean [10][100]           
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+UnaryOperator                    program    0(global)  void                        
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 8, column 12: there is an over array subscript on 'int'
+        print -int[23][214][421];
+               ^
+<Error> Found in line 10, column 11: invalid operand to unary operator 'not' ('boolean [10][100]')
+        print not arr;
+              ^

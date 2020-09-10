@@ -1,0 +1,21 @@
+1: /**
+2:  * function1.p: function 1
+3:  */
+4: //&T-
+5: function1;
+6: 
+7: // function declaration
+8: sum(a, b: integer): integer;
+9: 
+10: begin
+11:         var a : integer;
+12:         var b : integer;
+13: 
+14:         a := 1;
+15:         b := sum(a, a);
+16: end
+17: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

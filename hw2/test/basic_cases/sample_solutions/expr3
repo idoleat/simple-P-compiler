@@ -1,0 +1,23 @@
+1: /**
+2:  * expr3.p: mixed expression(s)
+3:  */
+4: //&T-
+5: expr3;
+6: 
+7: begin
+8:         var a, b: integer;
+9:         var d: real;
+10:         var e: boolean;
+11: 
+12:         e := 1+2*3 < a;
+13:         e := a >= 48 and a <= 57;
+14:         e := a+b < d;
+15:         e := d*23.4 >= 100.0;
+16:         e := (1+2)*(3+4) <> a;
+17: 
+18: end
+19: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

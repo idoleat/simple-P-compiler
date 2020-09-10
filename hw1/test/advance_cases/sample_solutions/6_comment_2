@@ -1,0 +1,12 @@
+<KWinteger>
+<id: iDent4>
+<;>
+1: /* this is a // C-style comment */integer iDent4;
+2: 
+3: /*   this is a multiple line C-style comment
+4:       hi \n   
+5: 	\n
+6: \t   1234
+7:    array   begin  end
+8:    123E-1
+9: */

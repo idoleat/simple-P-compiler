@@ -1,0 +1,31 @@
+1: /**
+2:  * function2.p: function 2
+3:  */
+4: //&T-
+5: function2;
+6: 
+7: // function declaration
+8: sum(a, b: integer): integer;
+9: product(a, b: integer): integer;
+10: 
+11: // function definition
+12: dot(x1, y1, x2, y2: integer): integer
+13: begin
+14: 	var result: integer;
+15: 	result := sum(product(x1, y1), product(x2, y2));
+16: 	return result;
+17: end
+18: end
+19: 
+20: begin
+21:         var a : integer;
+22:         var b : integer;
+23: 
+24:         a := 1;
+25:         b := dot(a, a);
+26: end
+27: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

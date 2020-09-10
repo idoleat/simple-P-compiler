@@ -1,0 +1,28 @@
+1: //&T-
+2: //test while loop with some statements
+3: whilefor1;
+4: 
+5: begin
+6:     var a : boolean;
+7:     while a do
+8:     begin
+9:         while a do
+10:         begin
+11:         end
+12:         end do
+13:         while a do
+14:         begin
+15:             while a do
+16:             begin
+17:             end
+18:             end do
+19:         end
+20:         end do
+21:     end
+22:     end do
+23: end
+24: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

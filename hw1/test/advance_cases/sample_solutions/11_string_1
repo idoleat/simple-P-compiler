@@ -1,0 +1,28 @@
+<KWprint>
+<string: aaaaaaa>
+<;>
+1: print "aaaaaaa";
+2: 
+<KWprint>
+<string: aaaaaaa"bbbbbbb>
+<;>
+3: print "aaaaaaa""bbbbbbb"; // aaaaaaa"bbbbbbb
+4: 
+<KWstring>
+<id: str>
+<:=>
+<string:  array begin end ; / \ <> 0aa a00 >
+<;>
+5: string str := " array begin end ; / \ <> 0aa a00 ";
+6: 
+<KWstring>
+<id: ss>
+<:=>
+<string: // C++ style omment>
+<;>
+7: string ss	:= "// C++ style omment";
+<id: ss>
+<:=>
+<string: /*C style comment*/>
+<;>
+8: ss := "/*C style comment*/";

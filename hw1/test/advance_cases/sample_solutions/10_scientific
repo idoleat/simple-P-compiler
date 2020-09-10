@@ -1,0 +1,15 @@
+<scientific: 123.0E123>
+1: 123.0E123
+<scientific: 123E0>
+<oct_integer: 0123>
+2: 123E00123
+<oct_integer: 00123>
+<id: E4>
+3: 00123E4
+<oct_integer: 00>
+<scientific: 9e123>
+4: 009e123
+<scientific: 123e12300>
+5: 123e12300
+<scientific: 12300e123>
+6: 12300e123

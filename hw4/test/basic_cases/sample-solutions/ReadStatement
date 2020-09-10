@@ -1,0 +1,56 @@
+1: //&T-
+2: ReadStatement;
+3: begin
+4:     var arr: array 10 of array 90 of integer;
+5:     var constant: 010;
+6: 
+7:     read i;
+8:     read arr[1][3][2];
+9: 
+10:     // [ERROR] must be scalar type
+11:     read arr[1];
+12: 
+13:     // [ERROR] cannot be constant or loop
+14:     read constant;
+15:     for i := 10 to 40 do
+16:     begin
+17:         read i;
+18:     end
+19:     end do
+20: end
+21: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+i                                loop_var   2(local)   integer                     
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+arr                              variable   1(local)   integer [10][90]            
+constant                         constant   1(local)   integer          8          
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+ReadStatement                    program    0(global)  void                        
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 7, column 10: use of undeclared symbol 'i'
+        read i;
+             ^
+<Error> Found in line 8, column 10: there is an over array subscript on 'arr'
+        read arr[1][3][2];
+             ^
+<Error> Found in line 11, column 10: variable reference of read statement must be scalar type
+        read arr[1];
+             ^
+<Error> Found in line 14, column 10: variable reference of read statement cannot be a constant or loop variable
+        read constant;
+             ^
+<Error> Found in line 17, column 14: variable reference of read statement cannot be a constant or loop variable
+            read i;
+                 ^

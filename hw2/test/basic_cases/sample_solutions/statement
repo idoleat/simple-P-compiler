@@ -1,0 +1,73 @@
+1: /**
+2:  * statement.p: examples for each statement
+3:  */
+4: //&T-
+5: statement;
+6: 
+7: echo()
+8: begin
+9:         var s: string;
+10:         read s;         // simple statement
+11:         print s;        // simple statement
+12: end
+13: end
+14: 
+15: funny(): boolean
+16: begin
+17:         return 1<>1;    // return statement
+18: end 
+19: end
+20: 
+21: 
+22: begin
+23: 
+24:         var a, b: real;
+25:         var i, k: integer;
+26: 
+27:         // simple statement
+28:         a := 1.0;
+29:         b := 2.3E-1;
+30: 
+31:         // compound statement
+32:         begin
+33:                 var c: boolean;
+34:                 c := a < b;
+35:         end
+36:         
+37:         // condition statement
+38:         if a > b then
+39:         begin
+40:                 print " a > b \n";
+41:         end
+42:         else
+43:         begin
+44:                 print " a <= b \n";
+45:         end
+46:         end if
+47: 
+48:         // while statement
+49:         i := 1;
+50:         while i <= 10 do
+51:         begin
+52:                 print i*i;
+53:                 print "\n";
+54:         end
+55:         end do
+56: 
+57:         // for statement
+58:         for k := 10 to 20 do 
+59:         begin
+60:                 print k*3;
+61:                 print "\n";
+62:         end
+63:         end do
+64: 
+65:         // function invocation statement 
+66:         echo();
+67: 
+68: end
+69: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

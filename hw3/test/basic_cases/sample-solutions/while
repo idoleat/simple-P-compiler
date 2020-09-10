@@ -1,0 +1,21 @@
+program <line: 4, col: 1> WhileControl void
+  compound statement <line: 8, col: 1>
+    declaration <line: 9, col: 3>
+      variable <line: 9, col: 7> counter integer
+        constant <line: 9, col: 16> 0
+    while statement <line: 12, col: 3>
+      binary operator <line: 12, col: 17> <
+        variable reference <line: 12, col: 9> counter
+        constant <line: 12, col: 19> 10
+      compound statement <line: 13, col: 3>
+        print statement <line: 14, col: 5>
+          constant <line: 14, col: 11> Taiwan No.1\n
+        assignment statement <line: 15, col: 13>
+          variable reference <line: 15, col: 5> counter
+          binary operator <line: 15, col: 24> +
+            variable reference <line: 15, col: 16> counter
+            constant <line: 15, col: 26> 1
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

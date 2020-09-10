@@ -1,0 +1,11 @@
+program <line: 4, col: 1> compound void
+  compound statement <line: 8, col: 1>
+    declaration <line: 9, col: 3>
+      variable <line: 9, col: 7> a integer
+    declaration <line: 10, col: 3>
+      variable <line: 10, col: 7> b boolean
+    compound statement <line: 11, col: 3>
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

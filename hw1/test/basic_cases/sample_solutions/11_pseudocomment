@@ -1,0 +1,29 @@
+<KWbegin>
+1: begin
+2:     //&S+
+<KWvar>
+<id: a>
+<:>
+<KWreal>
+<;>
+3: 	var a: real;
+<KWvar>
+<id: b>
+<:>
+<scientific: 123E+4>
+<;>
+4: 	var b: 123E+4;
+<KWvar>
+<id: c>
+<:>
+<KWstring>
+<;>
+<id: a>
+<:=>
+<scientific: 1.23E4>
+<;>
+<id: b>
+<:=>
+<oct_integer: 00123>
+<id: E4>
+<;>

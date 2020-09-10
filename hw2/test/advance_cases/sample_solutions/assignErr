@@ -1,0 +1,19 @@
+1: /**
+2:  * assignErr.p: LHS of assignment cannot be the result of function invocation
+3:  */
+4: //&T-
+5: assignErr;
+6: 
+7: func():integer
+8: begin
+9:         return 321;
+10: end
+11: end
+12: 
+13: begin
+
+|--------------------------------------------------------------------------
+| Error found in Line #14:         func() :=
+|
+| Unmatched token: :=
+|--------------------------------------------------------------------------

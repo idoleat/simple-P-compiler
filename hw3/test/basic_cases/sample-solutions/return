@@ -1,0 +1,8 @@
+program <line: 4, col: 1> ret void
+  compound statement <line: 8, col: 1>
+    return statement <line: 9, col: 3>
+      constant <line: 9, col: 10> 0
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

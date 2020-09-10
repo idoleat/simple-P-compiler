@@ -1,0 +1,23 @@
+1: /**
+2:  * relation.p: < <= = >= > <>       simple case(s)
+3:  */
+4: //&T-
+5: relation;
+6: 
+7: begin
+8: 
+9:         var a: boolean;
+10:         var b, c: integer;
+11: 
+12:         a := 1 <> 2;
+13:         a := 101 < 23;
+14:         a := b = 0;
+15:         a := c >= b;
+16:         a := 100 > b;
+17:         a := 56 <= c;
+18: end
+19: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

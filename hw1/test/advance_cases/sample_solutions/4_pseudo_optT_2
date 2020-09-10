@@ -1,0 +1,21 @@
+<KWstring>
+<:=>
+<string:  //&T- >
+<;>
+1: string:= " //&T- ";  // not close
+<KWinteger>
+<id: c>
+<;>
+2: integer c;
+3: 
+4: //&T-&S-
+5: abc
+6: def
+7: //&T+
+<id: bye>
+8: bye
+<KWinteger>
+9: integer
+10: 
+11: /*hello*///&T-
+12: "hello"

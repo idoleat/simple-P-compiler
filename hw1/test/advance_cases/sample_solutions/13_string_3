@@ -1,0 +1,41 @@
+<string: aaaaa>
+<string: bbbbb>
+1: "aaaaa" "bbbbb"
+2: 
+<string: line1\t\n	line2 line3>
+3: "line1\t\n	line2 line3"
+4: 
+<string: asdfas""asdfagg sldkfj	sdfs>
+5: "asdfas""""asdfagg sldkfj	sdfs"
+6: 
+<string: "">
+7: """"""		// string: ""
+8: 
+<string: "ab">
+9: """ab"""  	// string: "ab"
+10: 
+<string: aa>
+<id: bb>
+<string: cc>
+11: "aa"bb"cc"	// string: aa ; id: bb ; string: cc
+12: 
+<string: aa"bb"cc>
+13: "aa""bb""cc"	// string: aa"bb"cc
+14: 
+<string: >
+15: ""  		// empty string 
+<string: >
+<string: >
+16: ""  ""		// 2 empty strings
+<string: abc>
+17: "abc"		// string : abc
+<string: ab"c>
+18: "ab""c"		// string ab"c
+19: 
+<string: >
+<id: a>
+<string: >
+20: ""a""		// empty string ; id:a ; empty string
+21: 
+<string: ">
+22: """"		// string : "

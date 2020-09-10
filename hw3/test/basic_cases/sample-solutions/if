@@ -1,0 +1,25 @@
+program <line: 4, col: 1> IfControl void
+  compound statement <line: 8, col: 1>
+    declaration <line: 9, col: 3>
+      variable <line: 9, col: 7> debug boolean
+    if statement <line: 12, col: 3>
+      binary operator <line: 12, col: 9> >
+        constant <line: 12, col: 7> 1
+        constant <line: 12, col: 11> 0
+      compound statement <line: 13, col: 3>
+        print statement <line: 14, col: 5>
+          constant <line: 14, col: 11> true
+      compound statement <line: 17, col: 3>
+        print statement <line: 18, col: 5>
+          constant <line: 18, col: 11> false
+    if statement <line: 22, col: 3>
+      binary operator <line: 22, col: 12> =
+        variable reference <line: 22, col: 6> debug
+        constant <line: 22, col: 14> true
+      compound statement <line: 23, col: 3>
+        print statement <line: 24, col: 5>
+          constant <line: 24, col: 11> [LOG]\n
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

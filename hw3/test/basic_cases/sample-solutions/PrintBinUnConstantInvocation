@@ -1,0 +1,88 @@
+program <line: 4, col: 1> PrintBinUnConstantInvocation void
+  function declaration <line: 8, col: 1> func void ()
+    compound statement <line: 9, col: 1>
+      print statement <line: 10, col: 5>
+        binary operator <line: 10, col: 14> +
+          constant <line: 10, col: 11> 20
+          constant <line: 10, col: 16> 30
+  compound statement <line: 14, col: 1>
+    print statement <line: 15, col: 5>
+      unary operator <line: 15, col: 11> neg
+        constant <line: 15, col: 12> 1
+    print statement <line: 16, col: 5>
+      binary operator <line: 16, col: 13> *
+        constant <line: 16, col: 11> 1
+        constant <line: 16, col: 15> 5
+    print statement <line: 17, col: 5>
+      binary operator <line: 17, col: 14> /
+        constant <line: 17, col: 11> 12
+        constant <line: 17, col: 16> 3
+    print statement <line: 18, col: 5>
+      binary operator <line: 18, col: 14> mod
+        constant <line: 18, col: 11> 17
+        constant <line: 18, col: 18> 9
+    print statement <line: 19, col: 5>
+      binary operator <line: 19, col: 14> +
+        unary operator <line: 19, col: 11> neg
+          constant <line: 19, col: 12> 1
+        constant <line: 19, col: 16> 8
+    print statement <line: 20, col: 5>
+      binary operator <line: 20, col: 14> -
+        constant <line: 20, col: 11> 15
+        constant <line: 20, col: 16> 15
+    print statement <line: 21, col: 5>
+      binary operator <line: 21, col: 14> <
+        constant <line: 21, col: 11> 10
+        constant <line: 21, col: 16> 4
+    print statement <line: 22, col: 5>
+      binary operator <line: 22, col: 14> <=
+        constant <line: 22, col: 11> 10
+        constant <line: 22, col: 17> 4
+    print statement <line: 23, col: 5>
+      binary operator <line: 23, col: 14> =
+        constant <line: 23, col: 11> 10
+        constant <line: 23, col: 16> 4
+    print statement <line: 24, col: 5>
+      binary operator <line: 24, col: 14> >=
+        constant <line: 24, col: 11> 10
+        constant <line: 24, col: 17> 4
+    print statement <line: 25, col: 5>
+      binary operator <line: 25, col: 14> <>
+        constant <line: 25, col: 11> 10
+        constant <line: 25, col: 17> 4
+    print statement <line: 26, col: 5>
+      unary operator <line: 26, col: 11> not
+        constant <line: 26, col: 15> true
+    print statement <line: 27, col: 5>
+      binary operator <line: 27, col: 14> and
+        constant <line: 27, col: 11> 10
+        constant <line: 27, col: 18> 0
+    print statement <line: 28, col: 5>
+      binary operator <line: 28, col: 13> or
+        constant <line: 28, col: 11> 1
+        constant <line: 28, col: 16> 0
+    print statement <line: 29, col: 5>
+      binary operator <line: 29, col: 13> +
+        constant <line: 29, col: 11> 1
+        binary operator <line: 29, col: 17> *
+          constant <line: 29, col: 15> 8
+          constant <line: 29, col: 19> 4
+    print statement <line: 30, col: 5>
+      binary operator <line: 30, col: 19> *
+        binary operator <line: 30, col: 14> +
+          constant <line: 30, col: 12> 1
+          constant <line: 30, col: 16> 8
+        constant <line: 30, col: 21> 4
+    print statement <line: 31, col: 5>
+      binary operator <line: 31, col: 20> *
+        unary operator <line: 31, col: 11> neg
+          binary operator <line: 31, col: 15> +
+            constant <line: 31, col: 13> 1
+            constant <line: 31, col: 17> 8
+        constant <line: 31, col: 22> 4
+    print statement <line: 32, col: 5>
+      function invocation <line: 32, col: 11> func
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

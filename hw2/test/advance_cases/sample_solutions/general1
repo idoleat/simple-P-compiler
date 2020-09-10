@@ -1,0 +1,38 @@
+1: /**
+2:  * general1.p: general case 1
+3:  */
+4: //&T-
+5: general1;
+6: 
+7: var a: integer;
+8: var b, c: array 4 of integer;
+9: 
+10: func1()
+11: begin
+12: end
+13: end
+14: 
+15: func2( e: integer ): boolean
+16: begin
+17:     return (e > 10);
+18: end
+19: end
+20: 
+21: begin
+22:         var ii : integer;
+23:         for i := 10 to 15 do
+24:         begin
+25:             b[i-10+1] := i*i;
+26:             c[i*10+1] := i-b[i-10+1];
+27:         end
+28:         end do
+29: 
+30:         print func2();
+31:         func1();
+32: 
+33: end
+34: end
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

@@ -1,0 +1,24 @@
+program <line: 4, col: 1> function void
+  function declaration <line: 12, col: 1> func1 boolean (integer, integer, string)
+    declaration <line: 12, col: 7>
+      variable <line: 12, col: 7> x integer
+      variable <line: 12, col: 10> y integer
+    declaration <line: 12, col: 22>
+      variable <line: 12, col: 22> z string
+    compound statement <line: 13, col: 1>
+  function declaration <line: 17, col: 1> func2 boolean (boolean [1][2])
+    declaration <line: 17, col: 7>
+      variable <line: 17, col: 7> a boolean [1][2]
+    compound statement <line: 18, col: 1>
+  function declaration <line: 22, col: 1> func3 string ()
+  function declaration <line: 24, col: 1> func4 void ()
+    compound statement <line: 25, col: 1>
+  function declaration <line: 29, col: 1> func5 void (real, real)
+    declaration <line: 29, col: 7>
+      variable <line: 29, col: 7> b real
+      variable <line: 29, col: 10> c real
+  compound statement <line: 31, col: 1>
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

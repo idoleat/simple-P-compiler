@@ -1,0 +1,28 @@
+1: //&T-
+2: //if statement loses two keywords
+3: conditionErr;
+4: 
+5: func () : integer
+6: begin
+7: end
+8: end
+9: 
+10: begin
+11:     var b : integer;
+12:     var a : real;
+13:     var c : boolean;
+14:     if c then
+15:     begin
+16:     end
+17:     else
+18:     begin 
+19:     if c then
+20:     begin
+21:     end
+22:     end
+
+|--------------------------------------------------------------------------
+| Error found in Line #23:     end
+|
+| Unmatched token: end
+|--------------------------------------------------------------------------

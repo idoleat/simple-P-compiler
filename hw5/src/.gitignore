@@ -1,0 +1,10 @@
+*.o
+*.d
+compiler
+parser.c
+parser.cpp
+parser.h
+parser.output
+scanner.c
+scanner.cpp
+output_riscv_code/

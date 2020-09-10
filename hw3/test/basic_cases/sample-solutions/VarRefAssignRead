@@ -1,0 +1,65 @@
+program <line: 4, col: 1> AssignRead void
+  compound statement <line: 8, col: 1>
+    declaration <line: 9, col: 5>
+      variable <line: 9, col: 9> a integer
+    declaration <line: 10, col: 5>
+      variable <line: 10, col: 9> b boolean
+    declaration <line: 11, col: 5>
+      variable <line: 11, col: 9> c string
+    declaration <line: 12, col: 5>
+      variable <line: 12, col: 9> d real [1][9]
+    assignment statement <line: 14, col: 7>
+      variable reference <line: 14, col: 5> a
+      constant <line: 14, col: 10> 10
+    assignment statement <line: 15, col: 7>
+      variable reference <line: 15, col: 5> b
+      constant <line: 15, col: 10> false
+    assignment statement <line: 16, col: 7>
+      variable reference <line: 16, col: 5> c
+      constant <line: 16, col: 10> Compiler Design
+    assignment statement <line: 17, col: 13>
+      variable reference <line: 17, col: 5> d
+        constant <line: 17, col: 7> 1
+        constant <line: 17, col: 10> 5
+      constant <line: 17, col: 16> 10.090000
+    assignment statement <line: 19, col: 7>
+      variable reference <line: 19, col: 5> a
+      variable reference <line: 19, col: 10> a
+    assignment statement <line: 21, col: 7>
+      variable reference <line: 21, col: 5> a
+      binary operator <line: 21, col: 12> +
+        variable reference <line: 21, col: 10> a
+        constant <line: 21, col: 14> 231
+    assignment statement <line: 22, col: 7>
+      variable reference <line: 22, col: 5> b
+      unary operator <line: 22, col: 10> not
+        variable reference <line: 22, col: 14> b
+    assignment statement <line: 23, col: 7>
+      variable reference <line: 23, col: 5> c
+      binary operator <line: 23, col: 37> +
+        binary operator <line: 23, col: 28> +
+          constant <line: 23, col: 10> Compiler Design
+          constant <line: 23, col: 30> No.1
+        variable reference <line: 23, col: 39> c
+    assignment statement <line: 24, col: 23>
+      variable reference <line: 24, col: 5> d
+        binary operator <line: 24, col: 9> +
+          variable reference <line: 24, col: 7> a
+          constant <line: 24, col: 11> 1
+        binary operator <line: 24, col: 17> +
+          unary operator <line: 24, col: 14> neg
+            constant <line: 24, col: 15> 1
+          constant <line: 24, col: 19> 10
+      constant <line: 24, col: 26> 12.280000
+    read statement <line: 26, col: 5>
+      variable reference <line: 26, col: 10> a
+    read statement <line: 27, col: 5>
+      variable reference <line: 27, col: 10> d
+        binary operator <line: 27, col: 14> *
+          variable reference <line: 27, col: 12> a
+          variable reference <line: 27, col: 16> a
+        constant <line: 27, col: 19> 2
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

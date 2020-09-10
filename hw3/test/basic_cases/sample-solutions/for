@@ -1,0 +1,16 @@
+program <line: 4, col: 1> ForControl void
+  compound statement <line: 8, col: 1>
+    for statement <line: 11, col: 3>
+      declaration <line: 11, col: 7>
+        variable <line: 11, col: 7> idx integer
+      assignment statement <line: 11, col: 11>
+        variable reference <line: 11, col: 7> idx
+        constant <line: 11, col: 14> 0
+      constant <line: 11, col: 19> 10
+      compound statement <line: 12, col: 3>
+        print statement <line: 13, col: 5>
+          constant <line: 13, col: 11> ISA (Ideology State Automaton)\n
+
+|--------------------------------|
+|  There is no syntactic error!  |
+|--------------------------------|

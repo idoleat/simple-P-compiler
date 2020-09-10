@@ -1,0 +1,33 @@
+1: //&T-
+2: PrintStatement;
+3: begin
+4:     var arr: array 10 of array 90 of integer;
+5: 
+6:     print arr[1][2][3];
+7: 
+8:     print arr[1][2];
+9: 
+10:     // [ERROR] must be scalar
+11:     print arr[1];
+12:     print arr;
+13: end
+14: end
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+arr                              variable   1(local)   integer [10][90]            
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Name                             Kind       Level      Type             Attribute  
+--------------------------------------------------------------------------------------------------------------
+PrintStatement                   program    0(global)  void                        
+--------------------------------------------------------------------------------------------------------------
+<Error> Found in line 6, column 11: there is an over array subscript on 'arr'
+        print arr[1][2][3];
+              ^
+<Error> Found in line 11, column 11: expression of print statement must be scalar type
+        print arr[1];
+              ^
+<Error> Found in line 12, column 11: expression of print statement must be scalar type
+        print arr;
+              ^
