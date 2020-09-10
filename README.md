@@ -1,5 +1,8 @@
-# P Language Compiler - RISC-V_x32 CourseProject
-A s1mple `P` language compiler course project, compiling `P` to `RISC-V` assembly code.
+# P Language Compiler - RISC-V CourseProject
+A s1mple `P` language compiler course project, compiling `P` to `RISC-V` `RV32` instructions.
+* [Course website](https://compiler-s20.github.io/)
+* [Discussion repo](https://github.com/compiler-s20/discussion/)
+    * this course uses GitHub class room with awesome automation tool made by TAs.
 
 ## Project sturcture
 The project is evoluated in 5 stages.
