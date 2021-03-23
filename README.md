@@ -65,3 +65,7 @@ TAs provide us docker image to work within docker. Regular Ubuntu with `flex` an
 
 ## Notes
 I only write code in `src` folder. Other are written either by TAs or provided by third party tools. For more details please check the readme file in each folder.
+
+If you are NCTU/NYCU students and find this repo INTERESTING, please keep in mind that this is for knowledge and learning process sharing. You can ask question by opening issues. Please try your best on your own before finding something HELPFUL here.
+
+Don't stop persuing greatness on whatever way you are heading.
